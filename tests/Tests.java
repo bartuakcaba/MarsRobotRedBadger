@@ -23,5 +23,23 @@ public class Tests {
     }
 
 
+    @Test
+    public void turnRobotRigt() {
+        robot.turnRight();
+        assertEquals(0, robot.x);
+        assertEquals(0, robot.y);
+        assertEquals('E', robot.dir);
+    }
+
+    @Test
+    public void LeftTwice() {
+        robot.turnLeft();
+        robot.turnLeft();
+        assertEquals(0, robot.x);
+        assertEquals(0, robot.y);
+        assertEquals('S', robot.dir);
+    }
+
+
 
 }

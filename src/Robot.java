@@ -12,4 +12,14 @@ public class Robot {
         this.y = y;
         this.dir = dir;
     }
+
+    public void turnRight() {
+        
+    }
+
+    public void turnLeft() {
+
+    }
+
+
 }
