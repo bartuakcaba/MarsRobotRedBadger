@@ -18,14 +18,10 @@ public class Main {
 
         printForOneRobot(mars, scanner);
 
-        if (scanner.next() == "Yes") {
-            printForOneRobot(mars, scanner);
-        } else {
-            scanner.close(); 
-        }
-
 
     }
+
+    /*Gets user input and creats Robots outputting their position after commands*/
 
     private static void printForOneRobot(Grid mars, Scanner scanner) {
         System.out.println("Enter starting position of new robot with spaces between characters:");
@@ -49,7 +45,11 @@ public class Main {
 
         System.out.println("Continue? Type Y/N:");
 
-
+        if (scanner.next().equals("Y")) {
+            printForOneRobot(mars, scanner);
+        } else {
+            scanner.close();
+        }
 
     }
 

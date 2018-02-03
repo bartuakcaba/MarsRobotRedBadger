@@ -8,6 +8,7 @@ public class Robot {
     public Direction dir;
     public boolean lost;
 
+    /*Every robot has a grid instance because they need to know which planet they are on*/
     private Grid grid;
 
     public Robot(int x, int y, Direction dir, Grid grid) {
@@ -30,7 +31,7 @@ public class Robot {
 
     public void moveForward() {
         if (lost) return;
-        //Checks if the scent matches the direction of movement of robot
+        /*Checks if the scent matches the direction of movement of robot */
         if (grid.getScentNo(x,y) == dir.getDirectionNo()) return;
 
         switch (dir) {
@@ -57,6 +58,7 @@ public class Robot {
         }
     }
 
+    /*Checks if Robot would get lost and marks that location*/
     public boolean getLost(int currCord, int maxCord) {
 
         if (currCord == maxCord) {
