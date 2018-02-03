@@ -14,4 +14,11 @@ public class Grid {
     }
 
 
+    public boolean getScent(int Xcord, int Ycord) {
+        return grid[Xcord][Ycord] == 1;
+    }
+
+    public void putScent(int Xcord, int Ycord) {
+        grid[Xcord][Ycord] = 1;
+    }
 }

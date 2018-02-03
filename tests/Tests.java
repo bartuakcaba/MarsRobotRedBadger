@@ -102,6 +102,14 @@ public class Tests {
         assertEquals(true, robot.isLost());
     }
 
+    @Test
+    public void markGridWithScent() {
+        robot.moveForward();
+        robot.turnLeft();
+        robot.moveForward();
+        assertEquals(true, mars.getScent(robot.x,robot.y));
+    }
+
 
 
 

@@ -59,6 +59,7 @@ public class Robot {
 
         if (currCord == maxCord) {
             lost = true;
+            grid.putScent(x, y);
         }
 
         return lost;
