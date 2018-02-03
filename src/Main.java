@@ -21,7 +21,7 @@ public class Main {
         if (scanner.next() == "Yes") {
             printForOneRobot(mars, scanner);
         } else {
-            scanner.close();
+            scanner.close(); 
         }
 
 
