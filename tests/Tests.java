@@ -32,7 +32,7 @@ public class Tests {
     }
 
     @Test
-    public void LeftTwice() {
+    public void turnRobotLeftTwice() {
         robot.turnLeft();
         robot.turnLeft();
         assertEquals(0, robot.x);
@@ -53,6 +53,27 @@ public class Tests {
         assertEquals(0, robot.y);
         assertEquals(Direction.W, robot.dir);
     }
+
+    @Test
+    public void moveRobotTwice() {
+        robot.moveForward();
+        robot.moveForward();
+        assertEquals(0, robot.x);
+        assertEquals(2, robot.y);
+        assertEquals(Direction.N, robot.dir);
+    }
+
+    @Test
+    public void moveRobotRightForward() {
+        robot.moveForward();
+        robot.turnRight();
+        robot.moveForward();
+        assertEquals(1, robot.x);
+        assertEquals(1, robot.y);
+        assertEquals(Direction.N, robot.dir);
+    }
+
+
 
 
 }

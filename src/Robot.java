@@ -25,4 +25,6 @@ public class Robot {
     }
 
 
+    public void moveForward() {
+    }
 }
