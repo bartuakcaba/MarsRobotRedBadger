@@ -7,7 +7,7 @@ import static org.junit.Assert.assertEquals;
 public class Tests {
 
     Grid mars = new Grid(3,5);
-    Robot robot= new Robot(0,0,Direction.N);
+    Robot robot= new Robot(0,0,Direction.N, mars);
 
     @Test
     public void isGridSizeCorrect() {
