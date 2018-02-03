@@ -6,10 +6,12 @@ import static org.junit.Assert.assertEquals;
 
 public class Tests {
 
-    Grid mars = new Grid();
+    Grid mars = new Grid(3,5);
 
     @Test
     public void isGridSizeCorrect() {
-        assertEquals(0, mars.grid.length);
+        assertEquals(4, mars.grid.length);
+        assertEquals(6, mars.grid[0].length);
     }
+
 }
