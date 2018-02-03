@@ -86,7 +86,19 @@ public class Tests {
         robot.moveForward();
         robot.moveForward();
         robot.moveForward();
+        robot.moveForward();
+        assertEquals(0, robot.x);
+        assertEquals(5, robot.y);
+        assertEquals(true, robot.isLost());
+    }
 
+    @Test
+    public void isRobotLostbyGoingWest() {
+        robot.moveForward();
+        robot.turnLeft();
+        robot.moveForward();
+        assertEquals(0, robot.x);
+        assertEquals(1, robot.y);
         assertEquals(true, robot.isLost());
     }
 

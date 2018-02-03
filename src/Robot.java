@@ -29,31 +29,39 @@ public class Robot {
 
 
     public void moveForward() {
+        if (lost) return;
+
         switch (dir) {
             case N:
-                y++;
-                getLost(y, grid.maxY);
+                 if (!getLost(y, grid.maxY)) {
+                     y++;
+                 }
                 break;
             case E:
-                x++;
-                getLost(x, grid.maxX);
+                if (!getLost(x, grid.maxX)) {
+                    x++;
+                }
                 break;
             case S:
-                y--;
-                getLost(y, 0);
+                if (!getLost(y, 0)) {
+                    y--;
+                }
                 break;
             case W:
-                x--;
-                getLost(x, 0);
+                if (!getLost(x, 0)) {
+                    x--;
+                }
                 break;
         }
     }
 
-    public void getLost(int currCord, int maxCord) {
+    public boolean getLost(int currCord, int maxCord) {
 
-        if (currCord> maxCord) {
+        if (currCord == maxCord) {
             lost = true;
         }
+
+        return lost;
     }
 
     public boolean isLost() {
