@@ -129,7 +129,14 @@ public class Tests {
         assertEquals(true, mars.getScent(robot.x,robot.y));
         assertEquals(0, robot2.x);
         assertEquals(1, robot2.y);
-        assertEquals(false, robot.isLost());
+        assertEquals(false, robot2.isLost());
+
+        Robot robot3 = new Robot(0,1,Direction.E, mars);
+        robot3.moveForward();
+
+        assertEquals(1, robot3.x);
+        assertEquals(1, robot3.y);
+        assertEquals(false, robot3.isLost());
     }
 
 

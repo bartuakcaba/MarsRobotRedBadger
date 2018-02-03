@@ -30,6 +30,8 @@ public class Robot {
 
     public void moveForward() {
         if (lost) return;
+        //Checks if the scent matches the direction of movement of robot
+        if (grid.getScentNo(x,y) == dir.getDirectionNo()) return;
 
         switch (dir) {
             case N:
@@ -59,7 +61,7 @@ public class Robot {
 
         if (currCord == maxCord) {
             lost = true;
-            grid.putScent(x, y);
+            grid.putScent(x, y, dir);
         }
 
         return lost;

@@ -18,4 +18,10 @@ public enum  Direction {
         }
         return values()[ordinal() - 1];
     }
+
+    public int getDirectionNo() {
+        return this.ordinal()+1;
+    }
+
 }
+

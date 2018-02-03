@@ -13,12 +13,16 @@ public class Grid {
         this.maxY = maxY;
     }
 
-
     public boolean getScent(int Xcord, int Ycord) {
-        return grid[Xcord][Ycord] == 1;
+        return grid[Xcord][Ycord] > 0;
     }
 
-    public void putScent(int Xcord, int Ycord) {
-        grid[Xcord][Ycord] = 1;
+
+    public int getScentNo(int Xcord, int Ycord) {
+        return grid[Xcord][Ycord];
+    }
+
+    public void putScent(int Xcord, int Ycord, Direction dir) {
+        grid[Xcord][Ycord] = dir.ordinal()+1;
     }
 }
