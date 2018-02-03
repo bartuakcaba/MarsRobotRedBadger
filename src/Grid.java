@@ -12,4 +12,6 @@ public class Grid {
         this.maxX = maxX;
         this.maxY = maxY;
     }
+
+
 }
