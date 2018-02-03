@@ -70,7 +70,7 @@ public class Tests {
         robot.moveForward();
         assertEquals(1, robot.x);
         assertEquals(1, robot.y);
-        assertEquals(Direction.N, robot.dir);
+        assertEquals(Direction.E, robot.dir);
     }
 
 

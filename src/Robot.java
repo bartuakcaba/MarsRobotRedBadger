@@ -15,16 +15,27 @@ public class Robot {
 
     public void turnRight() {
         dir = dir.next();
-
     }
 
     public void turnLeft() {
-
         dir = dir.prev();
-
     }
 
 
     public void moveForward() {
+        switch (dir) {
+            case N:
+                y++;
+                break;
+            case E:
+                x++;
+                break;
+            case S:
+                y--;
+                break;
+            case W:
+                x--;
+                break;
+        }
     }
 }
