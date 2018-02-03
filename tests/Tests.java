@@ -110,6 +110,28 @@ public class Tests {
         assertEquals(true, mars.getScent(robot.x,robot.y));
     }
 
+    @Test
+    public void doesSecondRobotFallWithScent() {
+
+
+        robot.moveForward();
+        robot.turnLeft();
+        robot.moveForward();
+
+        assertEquals(0, robot.x);
+        assertEquals(1, robot.y);
+        assertEquals(true, robot.isLost());
+
+        Robot robot2 = new Robot(0,1,Direction.W, mars);
+
+        robot2.moveForward();
+
+        assertEquals(true, mars.getScent(robot.x,robot.y));
+        assertEquals(0, robot2.x);
+        assertEquals(1, robot2.y);
+        assertEquals(false, robot.isLost());
+    }
+
 
 
 
