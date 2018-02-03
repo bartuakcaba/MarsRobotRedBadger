@@ -6,6 +6,7 @@ public class Robot {
     public int x;
     public int y;
     public Direction dir;
+    public boolean lost;
 
     public Robot(int x, int y, Direction dir) {
         this.x = x;
@@ -37,5 +38,9 @@ public class Robot {
                 x--;
                 break;
         }
+    }
+
+    public boolean isLost() {
+        return lost;
     }
 }

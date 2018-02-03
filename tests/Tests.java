@@ -73,6 +73,24 @@ public class Tests {
         assertEquals(Direction.E, robot.dir);
     }
 
+    @Test
+    public void isRobotLost() {
+        assertEquals(false, robot.isLost());
+    }
+
+    @Test
+    public void isRobotLostbyMovingForward() {
+        robot.moveForward();
+        robot.moveForward();
+        robot.moveForward();
+        robot.moveForward();
+        robot.moveForward();
+        robot.moveForward();
+
+        assertEquals(true, robot.isLost());
+    }
+
+
 
 
 
