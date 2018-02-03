@@ -7,7 +7,7 @@ import static org.junit.Assert.assertEquals;
 public class Tests {
 
     Grid mars = new Grid(3,5);
-    Robot robot= new Robot(0,0,'N');
+    Robot robot= new Robot(0,0,Direction.N);
 
     @Test
     public void isGridSizeCorrect() {
@@ -19,7 +19,7 @@ public class Tests {
     public void initialRobotLocation() {
         assertEquals(0, robot.x);
         assertEquals(0, robot.y);
-        assertEquals('N', robot.dir);
+        assertEquals(Direction.N, robot.dir);
     }
 
 
@@ -28,7 +28,7 @@ public class Tests {
         robot.turnRight();
         assertEquals(0, robot.x);
         assertEquals(0, robot.y);
-        assertEquals('E', robot.dir);
+        assertEquals(Direction.E, robot.dir);
     }
 
     @Test
@@ -37,9 +37,22 @@ public class Tests {
         robot.turnLeft();
         assertEquals(0, robot.x);
         assertEquals(0, robot.y);
-        assertEquals('S', robot.dir);
+        assertEquals(Direction.S, robot.dir);
     }
 
+    @Test
+    public void turnRobotManyRigt() {
+        robot.turnRight();
+        robot.turnRight();
+        robot.turnRight();
+        robot.turnRight();
+        robot.turnRight();
+        robot.turnRight();
+        robot.turnRight();
+        assertEquals(0, robot.x);
+        assertEquals(0, robot.y);
+        assertEquals(Direction.W, robot.dir);
+    }
 
 
 }
